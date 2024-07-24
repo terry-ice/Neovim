@@ -56,7 +56,7 @@ brew install neovim
 # Some Plugins list
 
 - lazy.nvim [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - Amazing plugin manager
-- alpha [gaoolord/alpha-nvim](https://github.com/gaoolord/alpha-nvim) neovim greeter on startup[head-setting](https://patorjk.com/software/taag/#p=display&h=2&v=0&f=ANSI%20Shadow&t=muze)
+- alpha [gaoolord/alpha-nvim](https://github.com/gaoolord/alpha-nvim) [head-setting](https://patorjk.com/software/taag/#p=display&h=2&v=0&f=ANSI%20Shadow&t=muze)
 - [nvim-lua/plenary](https://github.com/nvim-lua/plenary.nvim) - Useful lua functions other plugins use
 - [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - tokyonight colorscheme (I modified some colors it in config)
 - [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - navigate b/w nvim splits & tmux panes with CTRL+h,j,k,l
@@ -64,6 +64,7 @@ brew install neovim
 - [gbprod/substitute.nvim](https://github.com/gbprod/substitute.nvim) - replace things with register with "s" and "S"
 - [nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+- [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) -- neovim greeter on startup
 - [rmagatti/auto-session](https://github.com/rmagatti/auto-session) - auto save neovim sessions/restore with keymap
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Better statusline
 - [akinsho/bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Better looking tabs
@@ -94,6 +95,5 @@ brew install neovim
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autoclose brackets, parens, quotes, etc...
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Autoclose tags
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent guides with treesitter integration
-- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Show modifications on left hand side and interact with git hunkss
-- [romgrk/barbar.nvim](https://github.com/romgrk/barbar.nvim) - Tabs, as understood by any other editor.
-- [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim) - written in lua that provides superior project management.
+- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Show modifications on left hand side and interact with git hunks
+- [kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) - Use lazygit within Neovim
