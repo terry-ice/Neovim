@@ -1,24 +1,24 @@
 return {
-   "ahmedkhalf/project.nvim",
-   event = "VimEnter",
-   cmd = "Telescope projects",
-   config = function()
-   local auto_session = require("project_nvim")
+  "ahmedkhalf/project.nvim",
+  event = "VimEnter",
+  config = function()
+    local project = require("project_nvim")
 
-   auto_session.setup({
-    options = {
-        numbers = "ordinal",
-        close_command = "bdelete! %d",       -- 可以关闭缓冲区的命令
-        right_mouse_command = "bdelete! %d", -- 右键关闭
-        left_mouse_command = "buffer %d",    -- 左键切换
-        middle_mouse_command = nil,          -- 中键
-        -- 其他配置选项
-      }
-   })
+    project.setup({
+      -- Detection methods: "lsp" or "pattern"
+      detection_methods = { "lsp", "pattern" },
+      -- Patterns used to detect root dir
+      patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+      silent_chdir = true,
+      scope_chdir = "global",
+    })
 
-   vim.api.nvim_set_keymap('n', '<leader>bn', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-   vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-   vim.api.nvim_set_keymap('n', '<leader>bc', ':BufferLinePickClose<CR>', { noremap = true, silent = true })
+    -- Integrate with telescope
+    require("telescope").load_extension("projects")
 
-   end,
- }
+    -- Bufferline navigation keymaps (previously misplaced here from barbar config)
+    vim.keymap.set("n", "<leader>bn", "<cmd>BufferLineCycleNext<CR>", { noremap = true, silent = true, desc = "Next buffer" })
+    vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineCyclePrev<CR>", { noremap = true, silent = true, desc = "Prev buffer" })
+    vim.keymap.set("n", "<leader>bc", "<cmd>BufferLinePickClose<CR>", { noremap = true, silent = true, desc = "Pick close buffer" })
+  end,
+}
